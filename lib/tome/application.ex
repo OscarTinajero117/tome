@@ -9,7 +9,7 @@ defmodule Tome.Application do
   def start(_type, _args) do
     children = [
       # Starts a worker by calling: Tome.Worker.start_link(arg)
-      # {Tome.Worker, arg}
+      {Tome.Repo, []}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
