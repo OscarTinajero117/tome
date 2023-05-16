@@ -7,11 +7,11 @@ defmodule Tome.Repo.Migrations.CreateBooks do
       add :isbn, :string
       add :description, :text
       add :status, :string, default: "published"
-      add :published_on, :date
+      add :published_on, :date, default: nil
 
       timestamps()
     end
   end
 
-  unique_index("books", [:isbn])
+ create unique_index("books", [:isbn])
 end
